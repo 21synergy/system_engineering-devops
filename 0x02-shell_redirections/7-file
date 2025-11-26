@@ -1,2 +1,2 @@
-#!/bin/bash; FILENAME='\'"Best School"\'\*$\?*****:)'
-rm -f "$FILENAME"; printf "Best School\n" > "$FILENAME"
+#!/bin/bash
+echo "Best School" > '\"Best School\"*\$?*****:)'
