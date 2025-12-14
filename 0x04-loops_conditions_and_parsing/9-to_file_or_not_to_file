@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# This script checks properties of a file named "school" and prints information about it
+
+filename="school"
+
+if [ -e "$filename" ]; then
+    echo "The file '$filename' exists."
+
+    if [ -f "$filename" ]; then
+        echo "It is a regular file."
+    elif [ -d "$filename" ]; then
+        echo "It is a directory."
+    fi
+
+    if [ -r "$filename" ]; then
+        echo "It is readable."
+    else
+        echo "It is not readable."
+    fi
+
+    if [ -w "$filename" ]; then
+        echo "It is writable."
+    else
+        echo "It is not writable."
+    fi
+
+    if [ -x "$filename" ]; then
+        echo "It is executable."
+    else
+        echo "It is not executable."
+    fi
+else
+    echo "The file '$filename' does not exist."
+fi
