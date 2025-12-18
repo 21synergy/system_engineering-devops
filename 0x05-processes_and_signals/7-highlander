@@ -1,14 +1,15 @@
-#!/usr/bin/env bash
-# This script prints "To infinity and beyond" indefinitely and reacts to SIGTERM
-# Define a handler for SIGTERM
-trap 'echo "I am invincible!!!"' SIGTERM
-# Infinite loop
-while true
-do
-  echo "To infinity and beyond"
-  sleep 2
-done
-#!/usr/bin/env bash
-# This script stops the 7-highlander process using its PID
+#!/bin/bash
 
-pkill -f 7-highlander
+# Function to handle the SIGTERM signal
+handle_sigterm() {
+    echo "I am invincible!!!"
+}
+
+# Trap the SIGTERM signal and call the handle_sigterm function
+trap 'handle_sigterm' SIGTERM
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
