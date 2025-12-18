@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Function to handle the SIGTERM signal
 handle_sigterm() {
